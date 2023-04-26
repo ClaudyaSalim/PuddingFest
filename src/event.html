@@ -7,6 +7,8 @@
     <title>Event - PuddingFest</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-3 px-5 sticky-top">
@@ -129,6 +131,7 @@
         </div>
       </div>
 
+      <!-- timeline -->
       <div class="container p-5 d-flex flex-column gap-5" id="timeline">
         <h1>D-Day Timeline - 27th April 2023</h1>
         <div class="list-group" id="myList" role="tablist">
@@ -222,14 +225,15 @@
         </div>
       </div>
 
+      <!-- register -->
       <div class="container p-5 d-flex flex-column gap-5" id="register">
         <h1>Register Now!</h1>
-        <form class="row g-5 needs-validation" novalidate>
+        <form class="row g-5 needs-validation" novalidate id="regisForm">
 
           <div class="col-md-6">
             <label for="exampleFormControlInput1" class="form-label">Email address</label>
             <div class="input-group has-validation">
-              <input type="email" class="form-control" id="validationCustomEmail" required placeholder="name@example.com">
+              <input type="email" class="form-control" id="validationCustomEmail" required placeholder="name@example.com" name="email">
               <div class="invalid-feedback">
                 Email should contain '@'.
               </div>
@@ -238,21 +242,21 @@
 
           <div class="col-md-6">
             <label for="validationCustom01" class="form-label">Name</label>
-            <input type="text" minlength="3" class="form-control" id="validationCustomName" required placeholder="Name">
+            <input type="text" minlength="3" class="form-control" id="validationCustomName" required placeholder="Name" name="name">
             <div class="invalid-feedback">
               Name should be more than 3 letters.
             </div>
           </div>
           <div class="col-md-6">
             <label for="validationCustom03" class="form-label">Phone Number</label>
-            <input type="tel" pattern="08[0-9]*" maxlength="14" class="form-control" id="validationCustomPhone" required>
+            <input type="tel" pattern="08[0-9]*" maxlength="14" class="form-control" id="validationCustomPhone" required placeholder="Phone" name="phone">
             <div class="invalid-feedback">
               Phone number should start with '08' and not more than 14 digits.
             </div>
           </div>
           <div class="col-md-6">
             <label for="validationCustom04" class="form-label">Event</label>
-            <select class="form-select" id="validationCustom04" required>
+            <select class="form-select" id="validationCustom04" required name="event">
               <option selected disabled value="">Choose event</option>
               <option>All</option>
               <option>Future of VR</option>
