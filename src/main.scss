@@ -1,0 +1,38 @@
+// variables
+$lavender: #EBF0FF;
+$purple: #5863F8;
+$red: #DA4450;
+$green: #03B5AA;
+$black: #0D1B2A;
+
+$theme-colors: (
+    "primary":    $purple,
+    "secondary":  $lavender,
+    "success":    $green,
+    "danger":     $red,
+    "light":      $lavender,
+    "dark":       $black
+);
+
+$body-bg: $lavender;
+$text-color-secondary: $purple;
+$font-weight-bold: 700;
+
+.nav-link, .btn {
+    font-weight: $font-weight-bold;
+}
+
+.btn-light {
+    $btn-color: $purple;
+}
+
+$list-group-active-color: $lavender;
+$list-group-active-bg: $purple;
+$list-group-hover-bg: rgb(88, 99, 248, 0.2);
+$list-group-action-active-color: $purple;
+$list-group-action-active-bg: $lavender;
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/bootstrap";

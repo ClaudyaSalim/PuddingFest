@@ -1,0 +1,57 @@
+.btn-light {
+    color: #5863F8;
+}
+
+.carousel-item {
+    background: #0D1B2A;
+}
+
+@media only screen and (max-width: 400px){
+    .hstack {
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center !important;
+        text-align: center !important;
+        gap: 40px !important;
+    }
+
+    .carousel-event, .carousel-inner, .carousel-item {
+        aspect-ratio: 1/1 !important;
+    }
+
+    .carousel-pic {
+        width: auto;
+        text-align: center;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+    .landing {
+        padding: 0px !important;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        display: flex;
+        justify-content: center !important;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .landing {
+        display: flex;
+        justify-content: center!important;
+        text-align: center;
+    }
+
+    .left-landing {
+        width: 100%;
+    }
+
+    .landing-pic {
+        width: 100% !important;
+    }
+}
